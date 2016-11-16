@@ -121,8 +121,8 @@ environments {
             mail {
                 host = "smtp.gmail.com"
                 port = 465
-                username = "deepanker.sharma@jellyfishtechnologies.com"
-                password = "nbs113sr@"
+                username = "Enter your email id"
+                password = "Enter your Password"
                 props = ["mail.smtp.auth"                  : "true",
                          "mail.smtp.socketFactory.port"    : "465",
                          "mail.smtp.socketFactory.class"   :
@@ -151,6 +151,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/js/**':        ['permitAll'],
 	'/**/css/**':       ['permitAll'],
 	'/**/images/**':    ['permitAll'],
+    '/**/usersImage/**':    ['permitAll'],
 	'/**/favicon.ico':  ['permitAll']
 ]
 

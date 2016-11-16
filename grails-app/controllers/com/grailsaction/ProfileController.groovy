@@ -13,7 +13,7 @@ class ProfileController {
 
     def viewprofile() {
 
-            def user_id=springSecurityService.currentUserId
+           /* def user_id=springSecurityService.currentUserId
             def validKeyInstance = Profile.get(user_id)
             if(!user_id)
             {
@@ -27,7 +27,7 @@ class ProfileController {
             response.contentLength=validKeyInstance.photo.size()
             OutputStream out = response.outputStream
             out.write(validKeyInstance.photo)
-            out.close()
+            out.close()*/
 
     }
     def userprofile()
@@ -48,26 +48,27 @@ class ProfileController {
     def create()
     {
         def user1=springSecurityService.currentUser
-       // println(params)
-      //  User user = User.get(params.user_id)
-        println("new Files : "+params)
-        def profile=profileService.createProfile(user1,params)
-        if (profile=="notsuccess")
+        Profile profile=new Profile(fullName:params.fullName,address: params.address,bio: params.bio,email: params.email,country: params.country,user: user1)
+        if(profile.validate())
         {
-            redirect(controller: 'profile',action: 'index')
+            println "Validate!!!"
+            profile.save(failOnError: true,flush: true)
+            def pic=request.getFile('photo')
+            if(!pic?.empty && pic.size<1024*200){
+                def abc=servletContext.getRealPath("/")+"usersImage/"+user1.loginId+".jpg"
+                println("------------------"+abc)
+                pic.transferTo(new File(abc))
+                println("saved!!!!!!!!!")
+
+            }
+            redirect(action: 'userprofile')
         }
-        else {
-            redirect(controller: 'home',action: 'index')
+        else{
+            println "----------------"+profile.errors.errorCount
         }
-       // def profile=new Profile(params)
-        /*profile.user = user
-        println("-----------------------------------")
-        profile.save(failOnError: true)
-        println("------------------------------------")
-        redirect(action: 'index')
-        println("------------------------------------")*/
 
     }
+
 
     def userList(){
 

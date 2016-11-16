@@ -21,7 +21,8 @@
         <tr><b><td>Name : </td></b><td>${profileView.fullName}</td></tr>
         <tr><b><td>Bio : </td></b><td>${profileView.bio}</td></tr>
         <tr><b><td>Email : </td></b><td>${profileView.email}</td></tr>
-        <tr><b><td>Profile Picture : </td></b><td><img class="avatar" width="150" height="150" src="${createLink(controller:'profile', action:'viewprofile')}" /></td></tr>
+        %{--<img class="avatar" width="150" height="150" src="${createLink(controller:'profile', action:'viewprofile')}" />--}%
+        <tr><b><td>Profile Picture : </td></b><td><g:img width="150" height="150" dir="usersImage" file="${userid}.jpg"/></td></tr>
         <tr><b><td>Countery: </td></b><td>${profileView.country}</td></tr>
         <tr><b><td>Address : </td></b><td>${profileView.address}</td></tr>
     </table>
