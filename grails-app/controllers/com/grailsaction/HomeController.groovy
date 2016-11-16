@@ -8,6 +8,7 @@ class HomeController {
     def springSecurityService
     def index() {
         User user=springSecurityService.currentUser
+        println("Deepanker")
         [userName:user]
     }
 
