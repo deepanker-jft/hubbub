@@ -121,8 +121,8 @@ environments {
             mail {
                 host = "smtp.gmail.com"
                 port = 465
-                username = "Enter your email id"
-                password = "Enter your Password"
+                username = "deepanker.sharma@jellyfishtechnologies.com"
+                password = "nbs113sr@@0"
                 props = ["mail.smtp.auth"                  : "true",
                          "mail.smtp.socketFactory.port"    : "465",
                          "mail.smtp.socketFactory.class"   :
