@@ -21,7 +21,7 @@ class User implements Serializable {
 	boolean passwordExpired
 	//Date  dateCreated
 	static hasOne = [profile:Profile]
-	static hasMany = [posts:Post,following:User]
+	static hasMany = [posts:Post,following:User,comments:Comment]
 	static constraints = {
 		loginId email: true, blank: false, nullable: false, unique: true
 		passwordHash blank: false

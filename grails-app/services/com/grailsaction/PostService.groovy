@@ -32,7 +32,7 @@ class PostService{
             //List<User> lst=new ArrayList<>();
             userArray.each { id ->
                 println("id : " + id)
-                User u = User.findById(id)
+                User u = User.get(id)
                 println("ss----------" + u.loginId)
                 // userSet.add(u)
                 //  println("Size..... "+userSet)

@@ -20,6 +20,7 @@ class HomeController {
         println params.max
         println params.offset
         User user=springSecurityService.currentUser
+        println("users "+user.loginId)
         Set<User> userSet = new HashSet();
         userSet.add(user)
         println(user.id+"===============ss==============="+userSet)
