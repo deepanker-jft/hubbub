@@ -14,13 +14,6 @@
 
 <body>
 <g:render template="/home/tab"/>
-<h1>
-<li>${userName.loginId}</li>
-<li>${userName.id}</li>
-<li>${userName.passwordHash}</li>
-    <g:form controller="logout" action="index" methods="post">
-        <g:submitButton name="logout" value="Logout"/>
-                    </g:form>
-</h1>
+<h1>Welcome to Hubbub Application!!!!!!!!!!!</h1>
 </body>
 </html>

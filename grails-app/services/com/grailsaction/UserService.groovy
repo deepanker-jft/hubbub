@@ -44,20 +44,16 @@ class UserService {
         }
     }
     def servicMethodUser(loginId){
-        def user=Profile.list()
-       /* def results=user.list {
-            not {'in'("loginId",loginId)}
+        // def user=Profile.list(
+        User user=User.findByLoginId(loginId)
+        println "user"+user
+        def result=Profile.findAllByUserNotEqual(user)
+
+        result.each { x ->
+            println "Users List : "+x.fullName
         }
-*/
-
-
-
-        /*def c = A.createCriteria()
-        def results = c.list {
-            not { 'in'("id",b*.aaa.id) }
-        }*/
-       // println(user)
-        return user
+        return result
+        return [user:result]
 
     }
     def createdFollowUser(currentUser,list)

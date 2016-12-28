@@ -10,6 +10,8 @@ class Post {
     static belongsTo = [user:User]
     //static hasMany = [tags:Tag]
     static mapping = {
+        unlike cascade: 'all-delete-orphan'
+        like cascade: 'all-delete-orphan'
         comments cascade: 'all-delete-orphan'
         sort dateCreated:"desc"
     }

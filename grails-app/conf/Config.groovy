@@ -40,7 +40,6 @@ grails.views.default.codec = "html"
 // The default scope for controllers. May be prototype, session or singleton.
 // If unspecified, controllers are prototype scoped.
 grails.controllers.defaultScope = 'singleton'
-
 // GSP settings
 grails {
     views {
@@ -122,7 +121,7 @@ environments {
                 host = "smtp.gmail.com"
                 port = 465
                 username = "deepanker.sharma@jellyfishtechnologies.com"
-                password = "nbs113sr@@0"
+                password = "---"
                 props = ["mail.smtp.auth"                  : "true",
                          "mail.smtp.socketFactory.port"    : "465",
                          "mail.smtp.socketFactory.class"   :
@@ -134,6 +133,8 @@ environments {
 }
 
 // Added by the Spring Security Core plugin:
+/*grails.plugin.springsecurity.useBasicAuth = true
+grails.plugin.springsecurity.basic.realmName = "hubbub"*/
 grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.grailsaction.User'
 grails.plugin.springsecurity.userLookup.usernamePropertyName = "loginId"
@@ -154,4 +155,4 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/**/usersImage/**':    ['permitAll'],
 	'/**/favicon.ico':  ['permitAll']
 ]
-
+org.grails.jaxrs.url.mappings=['/api']

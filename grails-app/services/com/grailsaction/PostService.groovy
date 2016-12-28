@@ -8,6 +8,9 @@ import org.grails.databinding.DataBinder
 class PostService{
 
 
+    def postList(){
+
+    }
     def postCreatedMethod(params,user){
 
 //        println("------------"+params)

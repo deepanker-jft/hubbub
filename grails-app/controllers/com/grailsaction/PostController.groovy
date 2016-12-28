@@ -165,7 +165,7 @@ class PostController {
             Post post=Post.get(params.id)
             println("+++"+urc.content)
              println("post list : "+post.content)
-             Comment comment=new Comment(user: user,content: urc.content)
+             Comment comment=new Comment(user: user,dateCreated: new Date(), content: urc.content)
              post.addToComments(comment)
            if(comment.validate()){
                comment.save(failOnError: true,flush: true)

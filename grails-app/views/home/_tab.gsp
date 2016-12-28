@@ -14,12 +14,11 @@
 
 <body>
 <ul class="tab">
-
     <li><g:link controller="home" action="index" class="tablinks" method="post">Home</g:link></li>
     <li><g:link controller="post" action="index" class="tablinks" method="post">Post</g:link></li>
     <li><g:link controller="post" action="viewPost" class="tablinks" method="post">View Post</g:link></li>
     <li><g:link controller="home" action="timeline" class="tablinks" method="post">Taged Post</g:link></li>
-    <li><g:link controller="profile" action="index" class="tablinks" method="post">Edit Profile</g:link></li>
+    %{--<li><g:link controller="profile" action="index" class="tablinks" method="post">Edit Profile</g:link></li>--}%
     <li><g:link controller="profile" action="userprofile" class="tablinks" method="post">View Profile</g:link></li>
     <li><g:link controller="user" action="users" class="tablinks" method="post">Users</g:link></li>
    %{-- <g:form controller="logout" action="index" method="post" name="logged_out">--}%

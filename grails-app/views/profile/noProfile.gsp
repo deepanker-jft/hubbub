@@ -15,5 +15,7 @@
 <body>
 <g:render template="/home/tab"/>
 <h1 align="center">No Profile Available</h1>
+
+<g:link controller="profile" action="createprofile" style="text-decoration: none;"><button>Create Profile</button></g:link>
 </body>
 </html>

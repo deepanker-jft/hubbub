@@ -44,6 +44,7 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo 'http://maven.restlet.org/'
     }
 
     dependencies {
@@ -51,6 +52,7 @@ grails.project.dependency.resolution = {
         runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
+        compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.1.4'
     }
 
     plugins {
@@ -59,9 +61,12 @@ grails.project.dependency.resolution = {
 
         // plugins for the compile step
        // compile ':mail:1.0.1'
-
+        compile "org.grails.plugins:quartz:1.0.2"
+        compile "org.grails.plugins:platform-core:1.0.0"
         compile "org.grails.plugins:mail:1.0.7"
+        compile "org.grails.plugins:spring-security-rest:1.5.4"
         compile ":scaffolding:2.1.2"
+        compile ':jaxrs:0.11'
         compile ':cache:1.1.7'
         compile ":asset-pipeline:1.9.6"
         compile "org.grails.plugins:spring-security-core:2.0.0"

@@ -17,7 +17,7 @@
 <g:render template="/home/tab"/>
 <h1>Its my Profile</h1>
     <table>
-        <tr><b><td>User ID : </td></b><td>${userid}</td></tr>
+        <tr><b><td>Login Id: </td></b><td>${userid}</td></tr>
         <tr><b><td>Name : </td></b><td>${profileView.fullName}</td></tr>
         <tr><b><td>Bio : </td></b><td>${profileView.bio}</td></tr>
         <tr><b><td>Email : </td></b><td>${profileView.email}</td></tr>
@@ -26,6 +26,7 @@
         <tr><b><td>Countery: </td></b><td>${profileView.country}</td></tr>
         <tr><b><td>Address : </td></b><td>${profileView.address}</td></tr>
     </table>
+<g:link controller="profile" action="index"><button>Edit Profile</button></g:link>
 
 </body>
 </html>
