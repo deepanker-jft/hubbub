@@ -17,7 +17,7 @@
 
 		<g:layoutHead/>
 	</head>
-	<body>
+	<body onload="addChar();">
 		<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a>
 			<sec:ifLoggedIn><b>${sec.loggedInUserInfo(field: 'username')}</b></sec:ifLoggedIn>
 		</div>

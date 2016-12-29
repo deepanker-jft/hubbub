@@ -14,6 +14,8 @@
 
 <body>
 <g:render template="/home/tab"/>
-<h1>Welcome to Hubbub Application!!!!!!!!!!!</h1>
+<asset:stylesheet src="automation.css"/>
+<asset:javascript src="automation.js"/>
+<p align="center">Welcome to Hubbub Application!!!<span class="cover"></span></p>
 </body>
 </html>

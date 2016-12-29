@@ -43,5 +43,6 @@
         <tr><td><g:submitButton name="submit" value="Submit" onclick="return validateform()"/></td></tr>
     </table>
 </g:form>
+<td><g:link controller="login" action="auth" ><button style="text-decoration: none;">Login</button></g:link></td>
 </body>
 </html>

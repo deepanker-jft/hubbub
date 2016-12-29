@@ -4,7 +4,6 @@ import grails.plugin.springsecurity.annotation.Secured
 
 @Secured(['ROLE_ADMIN'])
 class HomeController {
-
     def springSecurityService
     def index() {
         User user=springSecurityService.currentUser

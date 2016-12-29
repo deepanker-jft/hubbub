@@ -14,7 +14,7 @@
 <g:render template="/home/tab"/>
 <g:form action="postCreated">
     <table>
-        <tr><td>Content : </td><td><g:textArea name="content" required=""/></td></tr>
+        <tr><td>Content : </td><td><g:textArea name="content" required="" placeholder="Write Post....."/></td></tr>
         <g:if test="${userlist==null}">
             <tr><td>User List : </td><td><g:select name="user" from="${userlist}" noSelection="['':'-No Users-']"/></td></tr>
         </g:if>

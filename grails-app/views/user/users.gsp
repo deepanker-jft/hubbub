@@ -19,7 +19,7 @@
     <h3 align="center">List of User</h3>
     <g:each in="${user}" var="abc">
 
-         &nbsp;&nbsp; <g:checkBox name="myCheckbox" value="${abc.userId}" checked="false"/>${abc.fullName}
+         &nbsp;&nbsp; <g:checkBox name="myCheckbox" value="${abc.userId}" checked="false"/>${abc.fullName.toUpperCase()}
         <br>
     </g:each>
     <br>

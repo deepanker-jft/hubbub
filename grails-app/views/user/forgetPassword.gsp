@@ -8,14 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <meta content="main" name="layout">
     <title></title>
 </head>
 
 <body>
 <g:form action="resetPasswordMail">
+    <br>
     <p align="center">Email Id : <g:textField name="loginId" placeholder="enter email id" required=""/></p>
     <p><g:hiddenField name="counter" value="false"/></p>
-    <p align="center"><g:submitButton name="reset" value="Forget-Password"/></p>
+    <br>
+    <p align="center">&nbsp;&nbsp;&nbsp;<g:submitButton name="reset" value="Forget-Password"/></p>
 </g:form>
 </body>
 </html>
