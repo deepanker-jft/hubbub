@@ -5,6 +5,7 @@
     <meta content="main" name="layout">
     <g:external dir="js" file="validation.js"/>
     <g:javascript src="jquery-3.1.1.min.js"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $("#loginId").blur(function(){
